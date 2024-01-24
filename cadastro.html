@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cabine de serviços digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              azul: {
+                claro: "#fff",
+                escuro: "#30A596 ",
+                hover: "#e5e7eb",
+              },
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+            keyframes: {
+              sino_kf: {
+                "0%,100%": {
+                  transform: "rotate(-10deg)",
+                },
+                "50%": {
+                  transform: "rotate(10deg)",
+                },
+              },
+            },
+            animation: {
+              sino: "sino_kf 0.31s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body
+    class="bg-azul-claro font-inter flex justify-center items-center h-screen"
+  >
+    <main class="flex px-6 drop-shadow-2xl lg:w-3/4">
+      <section
+        class="bg-white p-10 gap-6 flex flex-col rounded-lg lg:w-full justify-center lg:rounded-l-none"
+      >
+        <div class="self-center relative group"></div>
+        <form>
+          <button
+            class="font-bold text-white bg-azul-escuro w-full py-2 rounded-full shadow-2xl hover:bg-azul-hover duration-150"
+            type="button"
+          >
+            Cadastrar
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
